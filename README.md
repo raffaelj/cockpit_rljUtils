@@ -95,4 +95,10 @@ rljutils:
         locked_entries_disabled: true   # entry lock is annoying while developing and testing with multiple browsers
 ```
 
+## Screenshots
+
+![rljUtils-language-buttons](https://user-images.githubusercontent.com/13042193/56857119-d951a580-6969-11e9-9b9f-15bd2ff3582f.png)
+
+![rljUtils-settings](https://user-images.githubusercontent.com/13042193/56857120-d951a580-6969-11e9-8947-188b6f1fdd0b.png)
+
 [1]: https://github.com/raffaelj/cockpit-scripts
