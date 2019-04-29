@@ -20,9 +20,11 @@ $this->on('admin.init', function() use ($cosmetics) {
 
     if (!empty($cosmetics['entry_default_group_main'])) {
 
-        // set default group in entry view to "Main" (default: "All")
+        // Set default group in entry view to "Main" (default: "All")
+        // When the page loads, `this.group` is an empty string. After the first
+        // call of `toggleGroup()` it is 'GroupName' or false.
         $this->on('collections.entry.aside', function() {
-            echo '<span if="{ !(group = \'Main\') }" class="">test</span>';
+            echo '<span if="{ group === \'\' && !(group = \'Main\') }" class="">test</span>';
         });
 
     }
