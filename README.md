@@ -10,7 +10,7 @@ Some adjustments are opinion-based. I like them and I wrote this addon as a base
 
 More options and helpers may come soon...
 
-**If you leave `collections_find`, `collections_tree` and `collections_collections` enabled, you might get some problems with collection-link fields.** But in my opinion
+**If you leave `collections_find`, `collections_tree` and `collections_collections` enabled, you might get some problems with collection-link fields.**
 
 ## Installation
 
@@ -27,7 +27,7 @@ By default, all options, except `locked_entries_disabled`, are enabled.
 
 Disable them via `config/config.yaml` or via UI under "settings" --> "rljUtils"
 
-Scroll down for anexample configuration.
+Scroll down for an example configuration.
 
 ## Features
 
@@ -39,7 +39,7 @@ Scroll down for anexample configuration.
   * `find` and `_find`
   * `tree`
   * `_collections`
-* restrict account helper function/route `/find`
+* restrict account helper function/route `/accounts/find`
   * disable the whole user list for non-admins
   * return user data only if it is filtered by id
   * return only needed data (user, name, group, _id) and not the personal email addresses
