@@ -20,6 +20,10 @@
         $this.lang = e.target.value;
         App.session.set('collections.entry.'+this.collection._id+'.lang', e.target.value);
 
+        // fix langage update for wysiwyg field
+        // I'm not 100% sure, if this line causes other side effects (e. g. performance)
+        $this.trigger('mount');
+
     }
 
     jQuery('#language_buttons').appendTo('cp-actionbar > div');
