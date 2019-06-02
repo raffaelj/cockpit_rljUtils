@@ -16,7 +16,6 @@
         e.preventDefault();
 
         $this.lang = e.target.value;
-        App.session.set('collections.entry.'+this.collection._id+'.lang', e.target.value);
 
         // fix language update for wysiwyg field
         // I'm not 100% sure, if this line causes other side effects (e. g. performance)

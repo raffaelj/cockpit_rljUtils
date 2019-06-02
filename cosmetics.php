@@ -31,9 +31,14 @@ $this->on('admin.init', function() use ($cosmetics) {
 
     if (!empty($cosmetics['entry_language_buttons'])) {
 
-        // add big language buttons to action bar
+        // add big language buttons to action bar (collection entry)
         $this->on('collections.entry.aside', function() {
-            include($this->path('rljutils:views/partials/entry_language_buttons.php'));
+            $this->renderView($this->path('rljutils:views/partials/entry_language_buttons.php'));
+        });
+
+        // add big language buttons to action bar (singleton form)
+        $this->on('singletons.form.aside', function() {
+            $this->renderView($this->path('rljutils:views/partials/singletons_language_buttons.php'));
         });
 
     }
