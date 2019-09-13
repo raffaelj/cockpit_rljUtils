@@ -10,7 +10,7 @@
  * @see       https://github.com/raffaelj/cockpit_rljUtils
  * @see       https://github.com/agentejo/cockpit/
  * 
- * @version   0.1.1
+ * @version   0.1.2
  * @author    Raffael Jesche
  * @license   MIT
  */
@@ -37,6 +37,7 @@ $this->module('rljutils')->extend([
                 'widgets_timer_disabled'    => true,
                 'entry_default_group_main'  => true,
                 'entry_language_buttons'    => true,
+                'wysiwyg_entity_encoding_raw' => true,
             ],
             'helpers' => [
                 'locked_entries_disabled'   => false,
@@ -96,5 +97,10 @@ if (COCKPIT_ADMIN && !COCKPIT_API_REQUEST) {
     include_once(__DIR__.'/admin.php');
     include_once(__DIR__.'/cosmetics.php');
     include_once(__DIR__.'/helpers.php');
+}
+
+// CLI
+if (COCKPIT_CLI) {
+    $this->path('#cli', __DIR__ . '/cli');
 }
 
