@@ -115,6 +115,9 @@ $this->on('admin.init', function() use ($hardening) {
 
             });
 
+            // remove assets link in settings dropdown
+            $this->helper('admin')->addAssets('rljutils:assets/hideassets.js');
+
         }
 
     }
