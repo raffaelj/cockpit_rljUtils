@@ -53,4 +53,34 @@ $this->on('admin.init', function() use ($cosmetics) {
 
     }
 
+    if (!empty($cosmetics['dark_mode_switch'])) {
+
+        $this->bind('/darkmode/toggle', function() {
+
+            $user_id = $this->module('cockpit')->getUser('_id');
+            $on      = $this->storage->getKey('cockpit/options', 'darkmode.'.$user_id, false);
+
+            $this->storage->setKey('cockpit/options', 'darkmode.'.$user_id, !$on);
+
+            return ['darkmode' => !$on];
+        });
+
+        $user_id = $this->module('cockpit')->getUser('_id');
+        $on      = $this->storage->getKey('cockpit/options', 'darkmode.'.$user_id, false);
+
+        if ($on) {
+            $this('admin')->addassets('rljutils:DarkMode/assets/style.min.css');
+        }
+
+        $this->on('cockpit.menu.system', function() {
+
+            $user_id = $this->module('cockpit')->getUser('_id');
+            $on      = $this->storage->getKey('cockpit/options', 'darkmode.'.$user_id, false);
+            $url     = $this->pathToUrl('rljutils:DarkMode/assets/style.min.css', true);
+
+            $this->renderView('rljutils:DarkMode/views/partials/menu_toggle.php', compact('on', 'url'));
+        });
+
+    }
+
 });

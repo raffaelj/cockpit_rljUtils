@@ -1,0 +1,241 @@
+
+// dark theme
+
+$color-primary: #927f15;
+$color-primary-hover: #84500e;
+$color-danger: #933b27;
+$color-danger-hover: #a62c3e;
+
+html {
+    background-color: #333;
+    color: #ddd;
+}
+
+.uk-button {
+    background-color: #aaa;
+}
+.uk-button-link, .uk-button-outline {
+    background-color: transparent;
+}
+.uk-button-success { // revert to original
+    background-color: #8cc14c;
+}
+
+.uk-text-primary {
+    color: $color-primary !important;
+}
+
+.uk-panel-box,
+.app-header,
+.uk-table th, .uk-table td,
+.header-sub-panel
+{
+    background-color: #444;
+    color: #ddd;
+}
+cp-actionbar {
+    background-color: #2a2a2a;
+}
+
+.uk-tab > li.uk-active > a {
+    color: #ddd;
+    &:after {
+        background-color: $color-primary;
+    }
+}
+.uk-tab > li > a:hover, .uk-tab > li > a:focus, .uk-tab > li.uk-open > a {
+    color: $color-primary;
+}
+
+.uk-link-muted
+{
+    color: #ddd;
+}
+.uk-link-muted:hover, .uk-link-muted a:hover {
+    color: #eee;
+}
+.uk-text-muted
+{
+    color: #ddd !important;
+}
+
+.uk-breadcrumb > li > a
+{
+    color: #ddd;
+}
+.uk-breadcrumb > li.uk-active > span
+{
+    color: #ddd !important;
+}
+
+.uk-button-link,
+a,
+.uk-link,
+.app-modulesbar a.uk-active
+{
+    color: $color-primary;
+}
+a:hover,
+.uk-link:hover,
+.uk-subnav > * > :hover,
+.uk-subnav > * > :focus,
+.uk-button-link:hover, .uk-button-link:focus, .uk-button-link:active, .uk-button-link.uk-active
+{
+    color: $color-primary-hover;
+}
+
+.uk-button-primary:hover, .uk-button-primary:focus {
+    background-color: $color-primary-hover;
+    color: #eee;
+}
+
+.uk-button-primary
+{
+    background-color: $color-primary;
+    color: #222;
+}
+.uk-badge
+{
+    background-color: $color-primary;
+}
+.uk-badge-outline {
+    background-color: transparent; // revert from uk-badge
+}
+
+.app-modulesbar > li > .uk-active::after,
+cp-fieldcontainer[active="true"]
+{
+    border-color: $color-primary;
+}
+
+.uk-bg-primary {
+    background-color: $color-primary !important;
+}
+
+.uk-form {
+    select, textarea, input:not([type]), input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+        color: #ddd;
+        &:focus {
+            color: #ddd;
+        }
+    }
+    ::placeholder {
+        color: #ccc;
+    }
+} 
+option {
+    background-color: #333;
+}
+::selection {
+    background-color: $color-primary;
+}
+
+.uk-dropdown
+{
+    background-color: #555;
+    color: #ddd;
+}
+.uk-nav-dropdown > li > a,
+.uk-nav-navbar > li > a
+{
+    color: #ddd;
+}
+.uk-nav-navbar .uk-nav-header {
+    color: #eee;
+}
+.uk-nav-navbar > li > a:hover, .uk-nav-navbar > li > a:focus {
+    background-color: #333;
+}
+.uk-nav-dropdown .uk-nav-header {
+    color: #ccc;
+}
+.uk-nav-dropdown > li > a:hover, .uk-nav-dropdown > li > a:focus {
+    background-color: #444;
+}
+
+.uk-nav-autocomplete > li > a {
+    color: #ddd;
+}
+.uk-nav-autocomplete > li.uk-active > a {
+    background-color: #666;
+}
+
+.uk-text-danger {
+    color: $color-danger !important;
+}
+.uk-form-switch input[type="checkbox"] + label::after {
+    background-color: $color-danger;
+}
+.uk-form-switch input[type="checkbox"] + label::before {
+    background-color: #222;
+}
+
+.uk-modal {
+    background-color: rgba(0,0,0,.5);
+}
+.uk-modal-dialog {
+    background-color: #333;
+}
+.uk-modal-header {
+    background-color: #444;
+}
+
+.uk-selected, tr.uk-selected > td {
+    background-color: #666;
+}
+
+.uk-button-danger {
+    background-color: $color-danger;
+    &:hover, &:focus {
+        background-color: $color-danger-hover;
+    }
+}
+
+.app-panel-dropdown::before {
+    background-color: rgba(0,0,0,.9);
+}
+
+// Finder
+.uk-nav-side > li > a {
+    color: $color-primary;
+    &:hover, &:focus {
+        color: $color-primary-hover;
+    }
+}
+.uk-nav-side > li.uk-active > a {
+    background-color: #222;
+}
+
+
+.uk-offcanvas {
+    background-color: rgba(0,0,0,.8);
+}
+
+.picoedit {
+    color: #222;
+}
+
+.app-modulesbar > li > a {
+    color: rgba(200,200,200,0.7);
+}
+
+.uk-tooltip {
+    background-color: #ddd;
+    color: #222;
+}
+
+.uk-datepicker-table a {
+    color: #ddd;
+}
+a.uk-datepicker-table-muted {
+    color: #999;
+}
+.uk-datepicker-table a.uk-active {
+    background-color: $color-primary;
+}
+
+.dashboard-header-panel,
+.uk-offcanvas-bar
+{
+    background-color: #222;
+}

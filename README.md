@@ -50,6 +50,8 @@ Scroll down for an example configuration.
 * disable the timer widget in the dashboard
 * set the default entries group in entry edit view to "Main" (the default is "All") - If you split the fields in categories, e. g. SEO and config, it is a bit annoying to see the whole list on startup
 * add some BIG, coloured language buttons to the action panel (I always forget to switch back after changing some localized values)
+* set entity encoding of wysiwyg fields to raw to prevent special chars replacements (`ä` turns to `&auml;`), so the full text search for words with special chars works like intended
+* add a dark mode toggle to the system menu
 
 ### Helpers
 
@@ -91,6 +93,8 @@ rljutils:
         widgets_timer_disabled: false
         entry_default_group_main: false
         entry_language_buttons: false
+        wysiwyg_entity_encoding_raw: false
+        dark_mode_switch: false
     helpers:
         locked_entries_disabled: true   # entry lock is annoying while developing and testing with multiple browsers
 ```
