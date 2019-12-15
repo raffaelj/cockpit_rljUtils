@@ -15,8 +15,9 @@
 
     <script type="view/script">
 
-        this.darkmode = {{ json_encode($on) }};
-        this.url      = {{ json_encode($url) }};
+        this.darkmode   = {{ json_encode($on) }};
+        this.style_url  = {{ json_encode($style_url) }};
+        this.script_url = {{ json_encode($style_url) }};
 
         this.on('mount', function() {
             this.update();
@@ -27,7 +28,8 @@
             var style = App.$('link[href*="DarkMode/assets/style.min.css"]').get(0);
 
             if (this.darkmode && typeof style == 'undefined') {
-                App.assets.require(this.url);
+                App.assets.require(this.style_url);
+                App.assets.require(this.script_url);
             }
             else if (this.darkmode && typeof style != 'undefined') {
                 style.disabled = false;

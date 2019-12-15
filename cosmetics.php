@@ -70,15 +70,17 @@ $this->on('admin.init', function() use ($cosmetics) {
 
         if ($on) {
             $this('admin')->addassets('rljutils:DarkMode/assets/style.min.css');
+            $this('admin')->addassets('rljutils:DarkMode/assets/darkmode.js');
         }
 
         $this->on('cockpit.menu.system', function() {
 
-            $user_id = $this->module('cockpit')->getUser('_id');
-            $on      = $this->storage->getKey('cockpit/options', 'darkmode.'.$user_id, false);
-            $url     = $this->pathToUrl('rljutils:DarkMode/assets/style.min.css', true);
+            $user_id    = $this->module('cockpit')->getUser('_id');
+            $on         = $this->storage->getKey('cockpit/options', 'darkmode.'.$user_id, false);
+            $style_url  = $this->pathToUrl('rljutils:DarkMode/assets/style.min.css', true);
+            $script_url = $this->pathToUrl('rljutils:DarkMode/assets/darkmode.js', true);
 
-            $this->renderView('rljutils:DarkMode/views/partials/menu_toggle.php', compact('on', 'url'));
+            $this->renderView('rljutils:DarkMode/views/partials/menu_toggle.php', compact('on', 'style_url', 'script_url'));
         });
 
     }
