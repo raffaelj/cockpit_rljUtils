@@ -67,7 +67,7 @@ $this->on('admin.init', function() use ($hardening) {
         // non-admins must send a user id to receive the user name
         $this->bind('/accounts/find', function() {
 
-            if ($this->module('cockpit')->isSuperAdmin()) {
+            if ($this->module('cockpit')->hasaccess('cockpit', 'accounts')) {
 
                 return $this->invoke('Cockpit\\Controller\\Accounts', 'find');
 
