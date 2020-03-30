@@ -63,6 +63,8 @@ $this->on('admin.init', function() use ($hardening) {
 
     if ($hardening['accounts_find']) {
 
+        // to do: $this->app->trigger('cockpit.accounts.disguise', [&$account]);
+
         // disable user lists for non-admins,
         // non-admins must send a user id to receive the user name
         $this->bind('/accounts/find', function() {

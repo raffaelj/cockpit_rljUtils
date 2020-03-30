@@ -46,7 +46,7 @@ $this->on('admin.init', function() use ($cosmetics) {
     if (!empty($cosmetics['wysiwyg_entity_encoding_raw'])) {
 
         // Set "raw" encoding for wysiwyg editor to preserve utf8 characters like ä, ö, ü etc.
-        // The default is "named", so the full text search doesn't fint text with "%auml;" etc.
+        // The default is "named", so the full text search doesn't fint text with "&auml;" etc.
         $this->on('app.layout.header', function() {
             echo '<script>App.$(document).on("init-wysiwyg-editor", function(e, editor) {editor.settings.entity_encoding = "raw";});</script>';
         });
