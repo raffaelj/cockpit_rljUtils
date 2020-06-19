@@ -1,18 +1,35 @@
 
 // dark theme
 
-$color-primary: #927f15;
-$color-primary-hover: #84500e;
+$color-black: #000;
+
+$color-primary: #a69016;
+$color-primary-hover: #c25f17;
 $color-danger: #933b27;
 $color-danger-hover: #a62c3e;
 
+$color-text: #efefef;
+$color-text-bright: #fff;
+$color-text-less-bright: #eee;
+$color-text-dark: $color-black;
+
+$color-bg-gloomy: $color-black;
+$color-bg-night: #222;
+$color-bg-dark: #333;
+
+$color-bg-light: #eee;
+
 html {
-    background-color: #333;
-    color: #ddd;
+    background-color: $color-bg-dark;
+    color: $color-text;
 }
 
 .uk-button {
-    background-color: #aaa;
+    background-color: $color-bg-light;
+    color: $color-text-dark;
+    &.uk-text-muted {
+        color: $color-black !important;
+    }
 }
 .uk-button-link, .uk-button-outline {
     background-color: transparent;
@@ -30,15 +47,27 @@ html {
 .uk-table th, .uk-table td,
 .header-sub-panel
 {
-    background-color: #444;
-    color: #ddd;
+    background-color: $color-bg-dark;
+    color: $color-text-bright;
 }
+
+.uk-panel-card {
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    &:hover {
+        box-shadow: 0 25px 80px rgba(0,0,0,0.8),0 3px 12px rgba(0,0,0,0.5);
+    }
+}
+
 cp-actionbar {
     background-color: #2a2a2a;
 }
 
+.uk-tab > li > a {
+    color: $color-text;
+}
+
 .uk-tab > li.uk-active > a {
-    color: #ddd;
+    color: $color-text-bright;
     &:after {
         background-color: $color-primary;
     }
@@ -49,7 +78,7 @@ cp-actionbar {
 
 .uk-link-muted
 {
-    color: #ddd;
+    color: $color-text-less-bright;
 }
 .uk-link-muted:hover, .uk-link-muted a:hover {
     color: #eee;
@@ -61,7 +90,7 @@ cp-actionbar {
 
 .uk-breadcrumb > li > a
 {
-    color: #ddd;
+    color: $color-text;
 }
 .uk-breadcrumb > li.uk-active > span
 {
@@ -237,7 +266,7 @@ a.uk-datepicker-table-muted {
 .dashboard-header-panel,
 .uk-offcanvas-bar
 {
-    background-color: #222;
+    background-color: $color-bg-night;
 }
 
 // wysiwyg/TinyMCE
@@ -273,4 +302,19 @@ a.uk-datepicker-table-muted {
 }
 .mce-menu-item:hover, .mce-menu-item:focus {
     background-color: #333 !important;
+}
+
+// entry preview
+
+collection-entrypreview .collection-entrypreview .preview-panel, [data-is="collection-entrypreview"] .collection-entrypreview .preview-panel {
+    background: $color-bg-gloomy;
+}
+
+collection-entrypreview .preview-panel-header, [data-is="collection-entrypreview"] .preview-panel-header {
+    background: $color-bg-night;
+}
+
+.preview-panel-footer .preview-mode {
+    background: $color-text-bright;
+    border-radius: 2px;
 }
