@@ -104,4 +104,3 @@ if (COCKPIT_ADMIN && !COCKPIT_API_REQUEST) {
 if (COCKPIT_CLI) {
     $this->path('#cli', __DIR__ . '/cli');
 }
-
