@@ -13,7 +13,7 @@ $this->on('admin.init', function() use ($hardening) {
         });
 
     }
-    
+
     // restrict built-in helper functions
 
     // deny request for `find` and `_find`

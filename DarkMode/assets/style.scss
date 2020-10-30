@@ -318,3 +318,18 @@ collection-entrypreview .preview-panel-header, [data-is="collection-entrypreview
     background: $color-text-bright;
     border-radius: 2px;
 }
+
+// codemirror, html field
+
+.uk-htmleditor-preview {
+    background-color: #0a0e14; // match with ayu-dark theme
+    color: #b3b1ad;
+}
+
+.uk-htmleditor-navbar {
+    background: #222;
+}
+
+.uk-htmleditor-navbar-nav > li > a {
+    color: #fff;
+}

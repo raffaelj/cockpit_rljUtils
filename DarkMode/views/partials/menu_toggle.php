@@ -17,7 +17,7 @@
 
         this.darkmode   = {{ json_encode($on) }};
         this.style_url  = {{ json_encode($style_url) }};
-        this.script_url = {{ json_encode($style_url) }};
+        this.script_url = {{ json_encode($script_url) }};
 
         this.on('mount', function() {
             this.update();
@@ -48,5 +48,5 @@
         }
 
     </script>
-    
+
 </li>
