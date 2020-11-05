@@ -39,6 +39,7 @@ $this->module('rljutils')->extend([
                 'entry_language_buttons'    => true,
                 'wysiwyg_entity_encoding_raw' => true,
                 'dark_mode_switch'          => true,
+                'display_sortable_entries'  => true,
             ],
             'helpers' => [
                 'locked_entries_disabled'   => false,

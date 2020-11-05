@@ -85,4 +85,10 @@ $this->on('admin.init', function() use ($cosmetics) {
 
     }
 
+    if (!empty($cosmetics['display_sortable_entries'])) {
+
+        $this('admin')->addassets('rljutils:assets/display_sortable_entries.css');
+
+    }
+
 });
