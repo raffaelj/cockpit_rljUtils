@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+* improved darkmode (markdown/html field)
+* added css to display custom sortable entries - Thanks @serjoscha87 - I copied the css from his FullTitle addon
+
 ## 0.1.3
 
 * added dark theme
