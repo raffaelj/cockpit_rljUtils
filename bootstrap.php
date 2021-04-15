@@ -32,6 +32,7 @@ $this->module('rljutils')->extend([
                 'collections_collections'   => true,
                 'accounts_find'             => true,
                 'assetsmanager'             => true,
+                'disable_getLinkedOverview' => true,
             ],
             'cosmetics' => [
                 'widgets_timer_disabled'    => true,

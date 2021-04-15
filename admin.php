@@ -124,4 +124,25 @@ $this->on('admin.init', function() use ($hardening) {
 
     }
 
+    if ($hardening['disable_getLinkedOverview']) {
+
+        if (!$this->module('cockpit')->isSuperAdmin()) {
+
+            // disable route
+            $this->bind('/collections/utils/getLinkedOverview', function() {
+                return $this->helper('admin')->denyRequest();
+            });
+
+            // hide LINKED button
+            $this->on('collections.entry.aside', function($collection) {
+
+                // target first button in sidebar to keep JSON button visible for admins
+                // might break if markup changes in future updates
+                echo '<script>this.on("mount", function() {App.$(".app-main > div > [data-is] > .uk-grid > .uk-width-medium-1-4 .uk-button-group .uk-button:first-child()").addClass("uk-hidden");});</script>';
+
+            });
+
+        }
+    }
+
 });

@@ -39,6 +39,8 @@ Scroll down for an example configuration.
   * `find` and `_find`
   * `tree`
   * `_collections`
+* disable helper routes that bypass ACLs completely
+  * `/collecitons/utils/getLinkedOverview`
 * restrict account helper function/route `/accounts/find`
   * disable the whole user list for non-admins
   * return user data only if it is filtered by id
@@ -59,44 +61,61 @@ Scroll down for an example configuration.
 
 ## Example configuration
 
-```yaml
-app.name: rljUtils Test
+config.php:
 
-languages:
-    default: English
-    de: Deutsch
+```php
+return [
+    "app.name" => "rljUtils Test",
+    "languages" => [
+        "default" => "English",
+        "de"      => "Deutsch",
+    ],
 
-groups:
-    manager:
-        cockpit:
-            backend: true
-            accounts: true
-            assets: true
-    author:
-        cockpit:
-            backend: true
-            assets: true
-    guest:
-        cockpit:
-            backend: true
+    "groups" => [
+        "manager" => [
+            "cockpit" => [
+                "backend" => true,
+                "accounts" => true,
+                "assets" => true,
+            ],
+        ],
+        "author" => [
+            "cockpit" => [
+                "backend" => true,
+                "assets" => true,
+            ],
+        ],
+        "guest" => [
+            "cockpit" => [
+                "backend" => true,
+            ],
+        ],
+    ],
 
-rljutils:
-    hardening:
-        allowed_uploads: false
-        max_upload_size: false
-        collections_find: false
-        collections_tree: false
-        collections_collections: false
-        accounts_find: false
-        assetsmanager: false
-    cosmetics:
-        widgets_timer_disabled: false
-        entry_default_group_main: false
-        entry_language_buttons: false
-        wysiwyg_entity_encoding_raw: false
-        dark_mode_switch: false
-    helpers:
-        locked_entries_disabled: true   # entry lock is annoying while developing and testing with multiple browsers
+    "rljutils" => [
+        "hardening" => [
+            "allowed_uploads" => false,
+            "max_upload_size" => false,
+            "collections_find" => false,
+            "collections_tree" => false,
+            "collections_collections" => false,
+            "accounts_find" => false,
+            "assetsmanager" => false,
+            "disable_getLinkedOverview" => false,
+        ],
+        "cosmetics" => [
+            "widgets_timer_disabled" => false,
+            "entry_default_group_main" => false,
+            "entry_language_buttons" => false,
+            "wysiwyg_entity_encoding_raw" => false,
+            "dark_mode_switch" => false,
+        ],
+        "helpers" => [
+            # entry lock is annoying while developing and testing with multiple browsers
+            "locked_entries_disabled" => true,
+        ],
+    ],
+];
 ```
 
 ## Screenshots
