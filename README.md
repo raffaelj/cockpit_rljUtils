@@ -10,15 +10,47 @@ Some adjustments are opinion-based. I like them and I wrote this addon as a base
 
 More options and helpers may come soon...
 
-**If you leave `collections_find`, `collections_tree` and `collections_collections` enabled, you might get some problems with collection-link fields.**
+**Warning:** If you leave `collections_find`, `collections_tree` and `collections_collections` enabled, you might get some problems with collection-link fields.
 
 ## Installation
 
-Copy this repository into `/addons` and name it `rljUtils` or
+Copy this repository into `/addons` and name it `rljUtils` or use the cli.
+
+### via git
 
 ```bash
 cd path/to/cockpit
 git clone https://github.com/raffaelj/cockpit_rljUtils.git addons/rljUtils
+```
+
+### via cp cli
+
+```bash
+cd path/to/cockpit
+./cp install/addon --name rljUtils --url https://github.com/raffaelj/cockpit_rljUtils/archive/master.zip
+```
+
+### via composer
+
+Make sure, that the path to cockpit addons is defined in your projects' `composer.json` file.
+
+```json
+{
+    "name": "my/cockpit-project",
+    "extra": {
+        "installer-paths": {
+            "addons/{$name}": ["type:cockpit-module"]
+        }
+    }
+}
+```
+
+```bash
+cd path/to/cockpit-root
+composer create-project --ignore-platform-reqs aheinze/cockpit .
+composer config extra.installer-paths.addons/{\$name} "type:cockpit-module"
+
+composer require --ignore-platform-reqs raffaelj/cockpit-rljutils
 ```
 
 ## Usage
