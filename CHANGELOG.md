@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5
+
+* added option to disable `getLinkedOverview` (also hides "LINKED" button)
+* improved settings UI
+* updated `README.md`
+
 ## 0.1.4
 
 * improved darkmode (markdown/html field)

@@ -1,6 +1,6 @@
 {
     "name": "cockpit-rljutils",
-    "version": "0.1.2",
+    "version": "0.1.5",
     "author": "Raffael Jesche",
     "homepage": "https://github.com/raffaelj/cockpit_rljUtils",
     "license": "MIT",
