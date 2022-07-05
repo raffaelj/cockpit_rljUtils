@@ -12,6 +12,6 @@
         "watch:sass": "npm run build:sass && npm run build:sass -- -w"
     },
     "devDependencies": {
-        "node-sass": "^4.13.1"
+        "node-sass": "^7.0.1"
     }
 }
