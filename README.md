@@ -1,5 +1,11 @@
 # rljUtils
 
+**This addon is not compatible with Cockpit CMS v2.**
+
+See also [Cockpit CMS v1 docs](https://v1.getcockpit.com/documentation), [Cockpit CMS v1 repo](https://github.com/agentejo/cockpit) and [Cockpit CMS v2 docs](https://getcockpit.com/documentation/), [Cockpit CMS v2 repo](https://github.com/Cockpit-HQ/Cockpit).
+
+---
+
 Addon for Cockpit CMS, that adds some hardening, cosmetics and helpers
 
 When using Cockpit with multiple users, it needs some customization. By default, some helper functions bypass the user group access control lists or they talk too much, so they definitely need some adjustments. This addon also adds some UI tweaks and helpers.
