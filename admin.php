@@ -133,12 +133,14 @@ $this->on('admin.init', function() use ($hardening) {
                 return $this->helper('admin')->denyRequest();
             });
 
-            // hide LINKED button
+            // hide Linked button
             $this->on('collections.entry.aside', function($collection) {
 
-                // target first button in sidebar to keep JSON button visible for admins
-                // might break if markup changes in future updates
-                echo '<script>this.on("mount", function() {App.$(".app-main > div > [data-is] > .uk-grid > .uk-width-medium-1-4 .uk-button-group .uk-button:first-child()").addClass("uk-hidden");});</script>';
+                // target button with content "Linked" in sidebar to keep
+                // JSON button visible for admins
+                // --> might break if markup changes in future updates
+                echo '<!-- hide Linked button -->' . PHP_EOL;
+                echo '<script>this.on("mount", function() {(App.$(".app-main > div > [data-is] > .uk-grid > .uk-width-medium-1-4 .uk-button-group .uk-button")).each(function(idx, el) {if (el.innerHTML == App.i18n.get("Linked")) el.classList.add("uk-hidden");});});</script>';
 
             });
 
