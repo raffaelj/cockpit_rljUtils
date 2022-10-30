@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6
+
+* fixed "hide linked button" (don't hide preview button)
+
 ## 0.1.5
 
 * added option to disable `getLinkedOverview` (also hides "LINKED" button)
