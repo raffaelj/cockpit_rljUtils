@@ -41,8 +41,10 @@ $this->module('rljutils')->extend([
                 'wysiwyg_entity_encoding_raw' => true,
                 'dark_mode_switch'          => true,
                 'display_sortable_entries'  => true,
+                'autofocus_login'           => true,
             ],
             'helpers' => [
+                // entry lock is annoying while developing and testing with multiple browsers
                 'locked_entries_disabled'   => false,
             ],
         ];

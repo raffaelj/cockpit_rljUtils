@@ -91,4 +91,14 @@ $this->on('admin.init', function() use ($cosmetics) {
 
     }
 
+    if (!empty($cosmetics['autofocus_login'])) {
+
+        $this->on(['app.render.view/cockpit:views/layouts/forgotpassword.php', 'app.render.view/cockpit:views/layouts/login.php'], function($template, $slots) {
+            $assets = $this['app.assets.base'];
+            $assets[] = 'rljutils:assets/login-autofocus.js';
+            $this['app.assets.base'] = $assets;
+        });
+
+    }
+
 });

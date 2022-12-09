@@ -1,5 +1,9 @@
 # Changelog
 
+## Upcoming
+
+* added auto focus to input fields (login and forgotpassword pages)
+
 ## 0.1.6
 
 * fixed "hide linked button" (don't hide preview button)
