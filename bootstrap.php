@@ -1,18 +1,18 @@
 <?php
 /**
- * Some utilities for Cockpit CMS
+ * Some utilities for Cockpit CMS v1
  *
  * When using Cockpit with multiple users, it needs some customization.
  * By default, some helper functions bypass the user group access control lists,
  * so they definitely need some adjustments. This addon also adds some UI tweaks
  * and helpers.
  *
- * @see       https://github.com/raffaelj/cockpit_rljUtils
- * @see       https://github.com/agentejo/cockpit/
- *
- * @version   0.1.6
+ * @version   0.1.7
  * @author    Raffael Jesche
  * @license   MIT
+ *
+ * @see       https://github.com/raffaelj/cockpit_rljUtils
+ * @see       https://github.com/agentejo/cockpit/
  */
 
 $this->module('rljutils')->extend([

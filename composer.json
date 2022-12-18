@@ -1,7 +1,7 @@
 {
     "name": "raffaelj/cockpit-rljutils",
     "type": "cockpit-module",
-    "description": "Addon for Cockpit CMS, that adds some hardening, cosmetics and helpers",
+    "description": "Addon for Cockpit CMS v1, that adds some hardening, cosmetics and helpers",
     "keywords": ["cockpit", "dark theme", "hardening", "cosmetics"],
     "homepage": "https://github.com/raffaelj/cockpit_rljUtils",
     "license": "MIT",

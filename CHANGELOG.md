@@ -1,8 +1,8 @@
 # Changelog
 
-## Upcoming
+## 0.1.7
 
-* added auto focus to input fields (login and forgotpassword pages)
+* added auto focus to input fields on login and forgotpassword pages
 
 ## 0.1.6
 
