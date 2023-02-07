@@ -2,7 +2,7 @@
 <div>
     <ul class="uk-breadcrumb">
         <li><a href="@route('/settings')">@lang('Settings')</a></li>
-        <li class="uk-active"><span>@lang('rljUtils')</span></li>
+        <li class="uk-active"><span>rljUtils</span></li>
     </ul>
 </div>
 
