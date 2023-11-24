@@ -46,6 +46,7 @@ $this->module('rljutils')->extend([
             'helpers' => [
                 // entry lock is annoying while developing and testing with multiple browsers
                 'locked_entries_disabled'   => false,
+                'log_exceptions'            => true,
             ],
         ];
 

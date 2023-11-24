@@ -153,6 +153,7 @@ return [
         'helpers' => [
             // entry lock is annoying while developing and testing with multiple browsers
             'locked_entries_disabled'   => true,
+            'log_exceptions'            => false,
         ],
     ],
 ];

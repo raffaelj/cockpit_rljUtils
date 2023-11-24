@@ -13,3 +13,11 @@ $this->on('admin.init', function() use($helpers) {
     }
 
 });
+
+if (!empty($helpers['log_exceptions'])) {
+    // TODO: stack trace (but for now it's better than before)
+    $this->on('error', function($error, $exception) {
+        $message = "Caught Exception: {$error['message']} in {$error['file']}:{$error['line']}";
+        \error_log($message);
+    });
+}

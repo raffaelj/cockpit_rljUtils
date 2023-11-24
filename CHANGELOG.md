@@ -1,5 +1,9 @@
 # Changelog
 
+## Upcoming
+
+* log exceptions, that are caught by Cockpit's custom execption handler
+
 ## 0.1.7
 
 * added auto focus to input fields on login and forgotpassword pages
